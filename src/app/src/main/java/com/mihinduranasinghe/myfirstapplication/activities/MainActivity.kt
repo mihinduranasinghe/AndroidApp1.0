@@ -1,15 +1,13 @@
-package com.mihinduranasinghe.myfirstapplication
+package com.mihinduranasinghe.myfirstapplication.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.mihinduranasinghe.myfirstapplication.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainActivity: AppCompatActivity(){
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,12 +19,15 @@ class MainActivity: AppCompatActivity(){
 
         }
         */
-        btnSubmit.setOnClickListener(){
+        btnSubmit.setOnClickListener() {
             val userName: String = txtUserName.text.toString()
 
             //Navigating to second layout window activity
-            val intent = Intent(this,SecondActivity::class.java)
-            intent.putExtra("user_name",userName)//Passing the message
+            val intent = Intent(
+                this,
+                SecondActivity::class.java
+            )
+            intent.putExtra("user_name", userName)//Passing the message
             startActivity(intent)
 
             /*
@@ -52,17 +53,16 @@ class MainActivity: AppCompatActivity(){
 
  */
 
-            btnRecycle.setOnClickListener(){
-                val intentcards = Intent(this,HobbiesActivity::class.java)
+            btnRecycle.setOnClickListener() {
+                val intentcards = Intent(
+                    this,
+                    HobbiesActivity::class.java
+                )
                 startActivity(intentcards)
             }
 
 
         }
-
-
-
-
 
 
     }
