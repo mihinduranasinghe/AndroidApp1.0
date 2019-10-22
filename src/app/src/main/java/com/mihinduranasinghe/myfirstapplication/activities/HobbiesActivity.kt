@@ -9,6 +9,13 @@ import com.mihinduranasinghe.myfirstapplication.models.Supplier
 import kotlinx.android.synthetic.main.activity_hobbies.*
 
 class HobbiesActivity : AppCompatActivity() {
+
+    companion object{
+        val TAG: String = HobbiesActivity::class.java.simpleName//when you write any Log statement we can use TAG
+
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hobbies)
